@@ -189,7 +189,7 @@ $(function(){
 			p.time = self.tttreatment();
 			p.epsilon = self.effectiveness();
 
-			var sol = numeric.dopri(0, 2000 ,[p.lambda/p.delta_t, 0,0,0,0,0,0,0,0,0,0,0, 1],intrahost,1e-3,10000);
+			var sol = numeric.dopri(0, 365*1.5,[p.lambda/p.delta_t, 0,0,0,0,0,0,0,0,0,0,0, 1],intrahost,1e-3,10000);
 			var y = numeric.transpose(sol.y);
 
 			graph_t.series[0].data = prep_output(sol.x, y[0]);
