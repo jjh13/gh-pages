@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> ODE Demo</title>
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script><style type="text/css"></style>
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+  <script type="text/javascript" src="knockout-3.3.0.js"></script>
+  <script type="text/javascript" src="numeric-1.2.6.js"></script>
+  <script type="text/javascript" src="d3.min.js"></script>
+  <script type="text/javascript" src="d3.layout.js"></script>
+  <script type="text/javascript" src="rickshaw.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" href="rickshaw.min.css">
+
+  <style type="text/css"></style>
+  
+
+</head>
+<body>
+
+<h4>T-cells/DNA integrated </h4>
+<div style='text-align: center;'>
+<div style='display: inline-block; font-family: Arial, Helvetica, sans-serif; '>
+	<div id="y_axis_t" style="float: left; width: 40px;"></div>
+	<div id="chart_t" style="float:left"></div>
+    <div id="legend_t" style="float: left;margin-left: 15px; text-align: left;"></div>
+</div>
+</div>
+
+<h4>Low/Mid/High</h4>
+<div style='text-align: center;'>
+<div style='display: inline-block; font-family: Arial, Helvetica, sans-serif;'>
+	<div id="y_axis_v" style="float: left; width: 40px;"></div>
+	<div id="chart_v" style="float:left"></div>
+    <div id="legend_v" style="float: left;margin-left: 15px;text-align: left;"></div>
+</div>
+</div>
+<br>
+Effectiveness: <input data-bind="value: effectiveness, valueUpdate: 'afterkeydown'">
+<div style="margin: 10px" data-bind="slider: effectiveness, sliderOptions: {min: 0, max: 1, range: 'min', step: 0.01}" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 69%;"></a></div>
+
+Time-to-treatment: <input data-bind="value: tttreatment, valueUpdate: 'afterkeydown'">
+<div style="margin: 10px" data-bind="slider: tttreatment, sliderOptions: {min: 0, max: 1000, range: 'min', step: 1}" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 45%;"></a></div>
+  
+
+</body></html>
